@@ -5,17 +5,30 @@ public class createAccount {
 
 
         Accounts prince = new Accounts(200, "Prince Orafu", 1000000.00);
-        Accounts ekene = new Accounts(201, "Ekene Okolo", 249);
+//        Accounts ekene = new Accounts(201, "Ekene Okolo", 249);
 
-        System.out.println(prince.getAccBalance());
-        System.out.println(ekene.getAccBalance());
+        System.out.println(prince.toString());
+        prince.changeAccName("Prince Nnamdi");
+        System.out.println(prince.toString());
+        prince.changeAccDetails(400, "Nnamdi Orafu");
+        System.out.println(prince.toString());
 
 
-        prince.transfer(ekene, 230000);
 
 
-        System.out.println(prince.getAccBalance());
-        System.out.println(ekene.getAccBalance());
+
+
+
+
+//        System.out.println(prince.getAccBalance());
+//        System.out.println(ekene.getAccBalance());
+//
+//
+//        prince.transfer(ekene, 230000);
+//
+//
+//        System.out.println(prince.getAccBalance());
+//        System.out.println(ekene.getAccBalance());
 
 
 

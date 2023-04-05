@@ -49,12 +49,14 @@ public class Accounts {
                 '}';
     }
 
+    //method to handle credit of accounts
     public void credit(double amount) {
         this.accBalance += amount;
         String status = amount + " Was added successfully, new Balance = " + this.accBalance;
         System.out.println(status);
     }
 
+    //method to handle debit of accounts
     public void debit(double amount) {
         if (amount > this.accBalance) {
             System.out.println("Insufficient balance");
@@ -66,6 +68,7 @@ public class Accounts {
 
     }
 
+    //method to handle transfer of accounts
     public void transfer(Accounts to, double amount){
         if(amount >  this.accBalance){
             System.out.println("Insufficient balance");
@@ -74,11 +77,24 @@ public class Accounts {
             to.credit(amount);
             String status = amount + " was transferred from " + this.accName + " to " + to.accName;
             System.out.println(status);
-
         }
-
     }
 
+    public void changeAccNo(int newAccNo){
+        this.id = newAccNo;
+        System.out.println("Account number successfully changed");
+    }
+
+    public void changeAccName(String newAccName){
+        this.accName = newAccName;
+        System.out.println("Account name successfully changed");
+    }
+
+    public void changeAccDetails(int newAccNo, String newAccName){
+        this.id = newAccNo;
+        this.accName = newAccName;
+        System.out.println("Account details successfully changed");
+    }
 
 
 }
