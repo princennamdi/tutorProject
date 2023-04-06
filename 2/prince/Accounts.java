@@ -11,8 +11,8 @@ public class Accounts {
         this.id = id;
         this.accName = accName;
         this.accBalance = accBalance;
-        System.out.println("A new account has been created");
-        System.out.println("==============================");
+//        System.out.println("A new account has been created");
+//        System.out.println("==============================");
 
     }
 
@@ -77,6 +77,27 @@ public class Accounts {
 
         }
 
+    }
+
+    public void changeAccNo(int newAccNo){
+        if(this.id == newAccNo){
+            System.out.println("New Account Name is same as old account name!");
+        }else{
+            this.id = newAccNo;
+        }
+        this.id = newAccNo;
+    }
+
+    public void changeAccName(String newAccName){
+        this.accName = newAccName;
+        System.out.println("Account details successfully changed");
+    }
+
+    public void changeAccDetails(String newAccName, int newAccNo){
+        this.accName = newAccName;
+        this.id = newAccNo;
+        System.out.println("Account details have been successfully changed");
+        System.out.println("Your new account name is: "+ this.accName + ". " + "Your new account number is: " + this.id);
     }
 
 
